@@ -41,4 +41,3 @@ React Router
 
 Her sayfada ilgili veriler listelenir ve detaylara ulaşabilirsiniz.
 
-Backend:
