@@ -1,11 +1,40 @@
-# React + TypeScript + Vite
+# Frontend — React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje **React + TypeScript + Vite** tabanlı frontend uygulamasıdır.  
+UI için **Tailwind CSS**, API istekleri için **Axios**, validasyon için **Zod** kullanılmaktadır.  
+Backend ile entegrasyon **NestJS (localhost:3001)** üzerinden yapılmaktadır.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Kullanılan Paketler
+
+- **React**, **React DOM**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**, **postcss**, **autoprefixer**
+- **Axios**
+- **Zod**
+- **React Router DOM**
+- **React Icons**
+- **ESLint + Prettier**
+
+---
+
+## ⚙️ Kurulum
+
+````bash
+# bağımlılıkları yükle
+npm install
+
+# development server başlat
+npm run dev
+
+# build
+npm run build
+
+# lint
+npm run lint
+
 
 ## Expanding the ESLint configuration
 
@@ -37,33 +66,78 @@ export default tseslint.config([
     },
   },
 ])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+
+frontend/
+ ┣ src/
+ ┃ ┣ components/ui/     # Ortak UI bileşenleri (Button, Input vs.)
+ ┃ ┣ features/          # Modüller (users, posts)
+ ┃ ┣ pages/             # Sayfalar (UsersPage, PostsPage vs.)
+ ┃ ┣ App.tsx            # Router tanımları
+ ┃ ┗ main.tsx           # Uygulama giriş noktası
+ ┣ public/
+ ┣ index.html
+ ┣ tailwind.config.js
+ ┣ postcss.config.js
+ ┗ README.md
+
+
+✅ Özellikler
+
+Kullanıcı CRUD işlemleri (name, email kontrolü — .com zorunlu)
+
+Gönderi CRUD işlemleri (title, body, user ilişkisi)
+
+Kullanıcı ve gönderiler arasında ilişki
+
+Form validasyonları (ör. title min 3, content min 5 karakter)
+
+API hata yakalama ve kullanıcıya UI üzerinden gösterme
+
+Modern ve responsive UI (Tailwind + ikonlar)
 
 export default tseslint.config([
   globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
+      ...tseslint.configs.recommendedTypeChecked,
+      ...tseslint.configs.stylisticTypeChecked,
     ],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
 ])
-```
+
+🔧 ESLint & Kod Kalitesi
+
+Proje ESLint + Prettier ile kod stilini korur.
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      ...tseslint.configs.recommendedTypeChecked,
+      ...tseslint.configs.stylisticTypeChecked,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+])
+
+
+📝 Notlar
+
+Kullanıcı silme işlemi, gönderisi olan kullanıcılar için engellenmiştir.
+
+Formlarda input validasyonları UI üzerinden gösterilmektedir.
+````
