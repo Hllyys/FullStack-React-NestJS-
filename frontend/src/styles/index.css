@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* arka plan */
+body {
+  @apply bg-gradient-to-br from-slate-50 via-sky-50 to-indigo-50 min-h-screen;
+}
+
+.container-std {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply rounded-2xl shadow-lg p-6 bg-white/70 backdrop-blur-sm border border-white/60;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  @apply shadow-xl;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 font-medium border transition active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white border-blue-600 hover:bg-blue-700 focus:ring-blue-400;
+}
+
+.btn-outline {
+  @apply bg-white/80 text-slate-800 border-slate-300 hover:bg-white;
+}
+
+.btn-danger {
+  @apply bg-rose-600 text-white border-rose-600 hover:bg-rose-700 focus:ring-rose-400;
+}
+
+.btn-success {
+  @apply bg-emerald-600 text-white border-emerald-600 hover:bg-emerald-700 focus:ring-emerald-400;
+}
+
+.input {
+  @apply w-full rounded-xl border px-3 py-2 bg-white/80 focus:ring-2 focus:ring-indigo-300 focus:border-indigo-300;
+}
+
+.label {
+  @apply text-sm text-slate-600;
+}
+
+/* tablo renkleri */
+.table-head {
+  @apply bg-gradient-to-r from-sky-600 to-indigo-600 text-white;
+}
+
+.table-row {
+  @apply odd:bg-white even:bg-slate-50 hover:bg-sky-50 transition;
+}
+
+.table-cell-th {
+  @apply px-4 py-3 text-left font-semibold tracking-wide;
+}
+
+.table-cell-td {
+  @apply px-4 py-3 text-slate-700;
+}
