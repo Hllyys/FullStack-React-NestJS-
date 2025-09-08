@@ -6,7 +6,7 @@
 
 🔹 Users ve Posts sayfaları
 
-🔹 Anasayfadan butonlarla sayfalara yönl
+🔹 Anasayfadan butonlarla sayfalara yönlendirme
 
 
 🧭 Kullanım
