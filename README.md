@@ -1,3 +1,5 @@
+Projenin ana sayfası ilk açılışta kullanıcıyı karşılamaktadır. Bu sayfadan “Posts” ve “Users” butonlarına tıklanarak ilgili detay sayfalarına geçiş yapılabilmektedir. 
+Her iki bölümde de CRUD işlemleri sorunsuz şekilde gerçekleştirilebilmektedir.
 Özellikler:
 
 🔹 Backend (Node.js / Express): API proxy, cache, hata yönetimi
@@ -41,3 +43,10 @@ React Router
 
 Her sayfada ilgili veriler listelenir ve detaylara ulaşabilirsiniz.
 
+Frontend çalıştırma:
+cd proje klasoru(frontend)
+npm run dev
+Backend çalıştırma:
+npm run start:dev
+
+Detaylı README.md projenin içinde yer almaktadır.
