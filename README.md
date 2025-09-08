@@ -45,9 +45,13 @@ React Router
 Her sayfada ilgili veriler listelenir ve detaylara ulaşabilirsiniz.
 
 Frontend çalıştırma:
+
 cd proje klasoru(frontend)
+
 npm run dev
+
 Backend çalıştırma:
+
 npm run start:dev
 
 Detaylı README.md projenin içinde yer almaktadır.
