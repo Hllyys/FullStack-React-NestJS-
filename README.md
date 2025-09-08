@@ -1,5 +1,6 @@
 Projenin ana sayfası ilk açılışta kullanıcıyı karşılamaktadır. Bu sayfadan “Posts” ve “Users” butonlarına tıklanarak ilgili detay sayfalarına geçiş yapılabilmektedir. 
 Her iki bölümde de CRUD işlemleri sorunsuz şekilde gerçekleştirilebilmektedir.
+
 Özellikler:
 
 🔹 Backend (Node.js / Express): API proxy, cache, hata yönetimi
